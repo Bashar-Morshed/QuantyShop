@@ -6,9 +6,11 @@ import android.content.Context
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import com.example.dialogfragment.Feedback
 
 class cart : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,13 +27,19 @@ class cart : AppCompatActivity() {
 
 
             }
+
+
         }
 
 
 
 
 
-
+        val bttn: Button = findViewById(R.id.button3)
+        bttn.setOnClickListener {
+            var dialog_var=Feedback()
+            dialog_var.show(supportFragmentManager, "Custom Dialog")
+        }
 
 
 
